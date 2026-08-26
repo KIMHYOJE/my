@@ -1,0 +1,42 @@
+/* Final editorial pass: quiet canvas, one accent, work before decoration. */
+.portfolio-page{background:#fff!important;color:#111!important;max-width:1280px}
+.portfolio-page .topbar{background:#fff!important;border-color:#e8e8e8!important;box-shadow:none!important}
+.portfolio-page .brand-mark{background:#111!important;color:#fff!important}
+.portfolio-page .chat-pill{background:#111!important}
+.portfolio-page .hero{background:#fff!important;border-bottom:1px solid #e8e8e8!important}
+.portfolio-page .kicker,.portfolio-page .strip-label{color:#999!important;letter-spacing:.18em}
+.portfolio-page .hero h1{font-weight:800!important;color:#111!important}
+.portfolio-page .hero h1 em,.portfolio-page h2 em{color:#ff6b4a!important}
+.portfolio-page .hero-text{color:#555!important}
+.portfolio-page .primary,.portfolio-page .floating-chat{background:#ff6b4a!important;box-shadow:none!important}
+.portfolio-page .hero-art{background:#f3f3f1!important;box-shadow:none!important;border:1px solid #e8e8e8}
+.portfolio-page .hero-photo{filter:grayscale(.1) contrast(.98)!important}
+.portfolio-page .floating-label{box-shadow:none!important;border:1px solid #1113}
+.portfolio-page .identity,.portfolio-page .archive,.portfolio-page .projects,.portfolio-page .activities,.portfolio-page .future{border-top:0!important}
+.portfolio-page .identity{background:#fff!important}
+.portfolio-page .archive{background:#fafafa!important}
+.portfolio-page .chapter-intro{min-height:46vh!important}
+.portfolio-page .chapter-intro h2,.portfolio-page .section-heading h2{font-weight:750!important}
+.portfolio-page .chapter-stack{border-top:1px solid #ddd!important}
+.portfolio-page .story-chapter{background:#fff!important;border-bottom:1px solid #ddd!important}
+.portfolio-page .story-chapter .chapter-no{color:#ff6b4a!important;opacity:1!important;font-size:25px!important;font-weight:600}
+.portfolio-page .story-chapter .chapter-copy h3{font-size:clamp(24px,3vw,44px)!important}
+.portfolio-page .story-chapter .chapter-copy p{color:#555!important}
+.portfolio-page .detail-tags span,.portfolio-page .project-meta span{border-color:#ddd!important;color:#555!important;background:#fff!important}
+.portfolio-page .projects{background:#fff!important}
+.portfolio-page .case-layout{margin-top:70px!important}
+.portfolio-page .case-index{border-color:#ddd!important}
+.portfolio-page .case-index:hover{color:#ff6b4a!important}
+.portfolio-page .case-detail{border-color:#ddd!important}
+.portfolio-page .case-detail dt,.portfolio-page .project-index{color:#ff6b4a!important}
+.portfolio-page .case-visual img{border-radius:0!important;box-shadow:none!important;border:1px solid #e4e4e4}
+.portfolio-page .activities{background:#111!important;color:#fff!important}
+.portfolio-page .activities .section-intro,.portfolio-page .activity-card>p:not(.activity-label){color:#aaa!important}
+.portfolio-page .activity-grid{background:#444!important}
+.portfolio-page .activity-card{background:#111!important}
+.portfolio-page .activity-label,.portfolio-page .activity-top span{color:#ff6b4a!important}
+.portfolio-page .future{background:#f4f1ed!important;text-align:left!important}
+.portfolio-page .future h2{margin-left:0!important}
+.portfolio-page .future p{margin-left:0!important;color:#555!important}
+.portfolio-page footer{background:#fff!important}
+@media(max-width:800px){.portfolio-page .hero h1{line-height:1.05!important}.portfolio-page .chapter-intro{min-height:54vh!important}.portfolio-page .case-detail{padding:60px 0!important}.portfolio-page .future{text-align:left!important}}
