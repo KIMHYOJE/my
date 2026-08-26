@@ -1,7 +1,8 @@
 /* Final editorial pass: quiet canvas, one accent, work before decoration. */
-.portfolio-page{background:#fff!important;color:#111!important;max-width:1280px}
-.portfolio-page .side-nav{display:flex!important;position:fixed;z-index:30;left:max(18px,calc((100vw - 1280px)/2 - 170px));top:50%;transform:translateY(-50%);width:145px;flex-direction:column;gap:0;letter-spacing:0;background:transparent}
+.portfolio-page{background:#fff!important;color:#111!important;max-width:none;width:100%;min-height:100vh}
+.portfolio-page .side-nav{display:flex!important;position:fixed;z-index:30;left:24px;top:50%;transform:translateY(-50%);width:175px;flex-direction:column;gap:0;letter-spacing:0;background:transparent}
 .portfolio-page .side-nav-title{font-size:11px;letter-spacing:.16em;margin-bottom:18px}.portfolio-page .side-nav a{display:flex;align-items:flex-start;gap:10px;padding:9px 0;color:#a1a1a1;font-size:10px;line-height:1.25}.portfolio-page .side-nav a:hover,.portfolio-page .side-nav a:focus{color:#ff6b4a}.portfolio-page .side-nav a b{font-size:10px;font-weight:500;color:#ff6b4a}.portfolio-page .side-nav a span{font-size:10px;letter-spacing:0}.portfolio-page .side-nav-chat{margin-top:14px;border-top:1px solid #ddd;padding-top:16px!important;color:#111!important;font-size:9px!important;letter-spacing:.14em!important}
+.portfolio-page .side-nav-group{border-bottom:1px solid #ddd;padding-bottom:10px}.portfolio-page .side-nav-projects{padding-top:14px}.portfolio-page .side-nav-projects>small{font-size:8px;letter-spacing:.15em;color:#aaa}.portfolio-page .side-nav-projects a{padding:7px 0;font-size:9px}.portfolio-page .side-nav-projects a span{font-size:9px}
 .portfolio-page .topbar{background:#fff!important;border-color:#e8e8e8!important;box-shadow:none!important}
 .portfolio-page .brand-mark{background:#111!important;color:#fff!important}
 .portfolio-page .chat-pill{background:#111!important}
@@ -12,6 +13,7 @@
 .portfolio-page .hero-text{color:#555!important}
 .portfolio-page .primary,.portfolio-page .floating-chat{background:#ff6b4a!important;box-shadow:none!important}
 .portfolio-page .hero-art{background:#f3f3f1!important;box-shadow:none!important;border:1px solid #e8e8e8}
+.portfolio-page .hero-monogram{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:clamp(64px,12vw,150px);font-weight:800;letter-spacing:-.1em;color:#111}.portfolio-page .hero-monogram span{font-size:11px;font-weight:500;letter-spacing:.2em;color:#999;margin-top:15px}
 .portfolio-page .hero-photo{filter:grayscale(.1) contrast(.98)!important}
 .portfolio-page .floating-label{box-shadow:none!important;border:1px solid #1113}
 .portfolio-page .identity,.portfolio-page .archive,.portfolio-page .projects,.portfolio-page .activities,.portfolio-page .future{border-top:0!important}
