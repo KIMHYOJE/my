@@ -32,7 +32,7 @@
 .portfolio-page .case-index:hover{color:#ff6b4a!important}
 .portfolio-page .case-detail{border-color:#ddd!important}
 .portfolio-page .case-detail dt,.portfolio-page .project-index{color:#ff6b4a!important}
-.portfolio-page .case-visual img{border-radius:0!important;box-shadow:none!important;border:1px solid #e4e4e4}
+.portfolio-page .case-visual img{border-radius:0!important;box-shadow:none!important;border:1px solid #e4e4e4;object-fit:contain!important;padding:10px;background:#f5f5f3}
 .portfolio-page .activities{background:#111!important;color:#fff!important}
 .portfolio-page .activities .section-intro,.portfolio-page .activity-card>p:not(.activity-label){color:#aaa!important}
 .portfolio-page .activity-grid{background:#444!important}
