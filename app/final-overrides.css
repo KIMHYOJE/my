@@ -47,6 +47,14 @@
 .portfolio-page .future h2{margin-left:0!important}
 .portfolio-page .future p{margin-left:0!important;color:#555!important}
 .portfolio-page footer{background:#fff!important}
+@keyframes portfolio-rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes portfolio-float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+.portfolio-page .hero-copy .kicker{animation:portfolio-rise .7s ease both}.portfolio-page .hero h1{animation:portfolio-rise .8s .08s ease both}.portfolio-page .hero-text{animation:portfolio-rise .8s .18s ease both}.portfolio-page .hero .primary{animation:portfolio-rise .8s .28s ease both}.portfolio-page .hero-art{animation:portfolio-rise .9s .2s ease both}.portfolio-page .floating-label{animation:portfolio-float 5s ease-in-out infinite}.portfolio-page .label-code{animation-delay:-1.8s}.portfolio-page .label-ai{animation-delay:-3.2s}
+.portfolio-page .topbar a,.portfolio-page .topbar button,.portfolio-page .side-nav a,.portfolio-page .primary,.portfolio-page .floating-chat{transition:color .2s ease,background .2s ease,transform .2s ease,box-shadow .2s ease}.portfolio-page .topbar a:hover{color:#ff6b4a}.portfolio-page .primary:hover,.portfolio-page .floating-chat:hover{transform:translateY(-3px);box-shadow:0 10px 25px #ff6b4a35}.portfolio-page .side-nav a:hover{transform:translateX(5px)}
+.portfolio-page .theme-grid article{transition:background .25s ease,padding-left .25s ease}.portfolio-page .theme-grid article:hover{background:#fff;padding-left:14px}.portfolio-page .theme-grid article:hover h3{color:#ff6b4a}
+.portfolio-page .case-detail{transition:background .25s ease}.portfolio-page .case-detail:hover{background:#fcfcfa}.portfolio-page .case-visual img{transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .45s ease}.portfolio-page .case-visual img:hover{transform:scale(1.025);filter:contrast(1.04)}
+.portfolio-page .case-detail{animation:portfolio-rise .8s ease both}.portfolio-page .case-detail:nth-child(2){animation-delay:.08s}.portfolio-page .case-detail:nth-child(3){animation-delay:.16s}.portfolio-page .case-detail:nth-child(4){animation-delay:.24s}.portfolio-page .case-detail:nth-child(5){animation-delay:.32s}
+@media(prefers-reduced-motion:reduce){.portfolio-page *{animation:none!important;transition:none!important}}
 @media(max-width:800px){.portfolio-page .hero h1{line-height:1.05!important}.portfolio-page .chapter-intro{min-height:54vh!important}.portfolio-page .case-detail{padding:60px 0!important}.portfolio-page .future{text-align:left!important}}
 @media(max-width:800px){.portfolio-page .case-visual img{height:360px!important}.portfolio-page .case-visual .case-thumb{height:125px!important}}
 @media(max-width:800px){.portfolio-page .case-visual.single img{height:360px!important}}
