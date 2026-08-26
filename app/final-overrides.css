@@ -37,6 +37,7 @@
 .portfolio-page .case-detail{border-color:#ddd!important}
 .portfolio-page .case-detail dt,.portfolio-page .project-index{color:#ff6b4a!important}
 .portfolio-page .case-visual img{border-radius:0!important;box-shadow:none!important;border:1px solid #e4e4e4;object-fit:contain!important;padding:10px;background:#f5f5f3;height:560px!important}.portfolio-page .case-visual .case-thumb{height:200px!important}
+.portfolio-page .case-visual.single{display:block}.portfolio-page .case-visual.single img{width:100%;height:560px!important}
 .portfolio-page .activities{background:#111!important;color:#fff!important}
 .portfolio-page .activities .section-intro,.portfolio-page .activity-card>p:not(.activity-label){color:#aaa!important}
 .portfolio-page .activity-grid{background:#444!important}
@@ -48,5 +49,6 @@
 .portfolio-page footer{background:#fff!important}
 @media(max-width:800px){.portfolio-page .hero h1{line-height:1.05!important}.portfolio-page .chapter-intro{min-height:54vh!important}.portfolio-page .case-detail{padding:60px 0!important}.portfolio-page .future{text-align:left!important}}
 @media(max-width:800px){.portfolio-page .case-visual img{height:360px!important}.portfolio-page .case-visual .case-thumb{height:125px!important}}
+@media(max-width:800px){.portfolio-page .case-visual.single img{height:360px!important}}
 @media(max-width:800px){.portfolio-page .theme-fit{padding:90px 24px}.portfolio-page .theme-grid{grid-template-columns:1fr 1fr;margin-top:45px}.portfolio-page .theme-grid article{padding:22px 14px 28px 0;margin:0 14px 0 0}.portfolio-page .theme-grid article:nth-child(2){border-right:0;margin-right:0}.portfolio-page .theme-grid h3{font-size:20px;margin-top:35px}}
 @media(max-width:800px){.portfolio-page .side-nav{display:none!important}}
