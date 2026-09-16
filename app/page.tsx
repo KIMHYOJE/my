@@ -6,6 +6,12 @@ type Message = { role: 'user' | 'assistant'; content: string };
 const profile = `김효제는 울산대학교 ICT융합학부 1학년으로, 2026년 1학기부터 여름방학까지 디자인과 개발을 함께 시도했다. 부모님 카페 코지커피의 포스터·메뉴판 배너·인스타그램 콘텐츠를 만들었고, React·TypeScript 기반 식단 웹앱, 부울경 AI 해커톤 아이디어 OceanSnap, AI 메이커스랩 프로젝트, 게임잼 프로젝트를 경험했다. 게임잼에서는 대상을 받았고, Ada·Python·Java Spring Boot·JPA를 학습했으며 TOPCIT 230점을 받았다.`;
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const assetPath = (path: string) => `${basePath}${path}`;
+const localAnswer = (prompt: string) => {
+  if (prompt.includes('코지커피')) return '부모님 카페 코지커피의 분위기와 필요한 정보를 관찰한 뒤 포스터, 메뉴판 배너, 로고, 인스타그램 콘텐츠를 제작했습니다. 실제 의뢰를 시각물로 완성한 작업입니다.';
+  if (prompt.includes('게임잼') || prompt.includes('Unity')) return '게임잼에서는 Unity를 사용해 팀원들과 게임 콘텐츠를 제작했습니다. 제한된 시간 안에 플레이 테스트와 발표까지 진행했고, 대상이라는 결과를 얻었습니다.';
+  if (prompt.includes('OceanSnap') || prompt.includes('해양')) return 'OceanSnap은 부울경 AI 해커톤에서 해양 쓰레기 문제를 해결할 아이디어로 고려한 프로젝트입니다. 시민 신고와 이미지 분석을 연결하는 사용자 흐름을 구상했으며 수상작은 아닙니다.';
+  return '코지커피 리뉴얼, 오늘의 식단 웹앱, OceanSnap 해양 쓰레기 분석 아이디어, AI 메이커스랩, Unity 게임잼을 만들거나 기획했습니다. 게임잼은 Unity로 제작해 대상을 받았고, OceanSnap은 해커톤 참가 아이디어로 수상작이 아닙니다.';
+};
 const semesters = [
   { period: '1학기 시작 · 02–03', title: '디자인과 대학생활을 동시에 시작', text: '코지커피 리뉴얼 포스터·메뉴판 배너를 만들며 실제 사용자를 생각하는 디자인을 경험했습니다. 울산대학교 ICT융합학부에 입학하고 동아리에도 도전했습니다.', tags: ['코지커피', '입학', '동아리'], color: 'yellow' },
   { period: '1학기 학습 · 04–05', title: '관심을 기술의 언어로 넓히다', text: '음악과 공연을 콘텐츠로 기록하는 한편, Python 자료구조·웹 스크래핑·Spring Boot·JPA를 공부했습니다. 트랙페스타에서 전공과 선배들의 실제 이야기도 만났습니다.', tags: ['콘텐츠', 'Python', 'Spring Boot'], color: 'blue' },
@@ -23,7 +29,28 @@ const projects = [
 export default function Home() {
   const [chatOpen, setChatOpen] = useState(false); const [mobileMenuOpen, setMobileMenuOpen] = useState(false); const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null); const [input, setInput] = useState(''); const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([{ role: 'assistant', content: '안녕하세요. 저는 효제의 2026년 기록을 안내하는 AI 페르소나입니다. 어떤 프로젝트를 어떻게 만들었는지 물어보세요.' }]);
-  const askBot = async (preset?: string) => { const prompt = (preset ?? input).trim(); if (!prompt || loading) return; setInput(''); setMessages((m) => [...m, { role: 'user', content: prompt }]); setLoading(true); try { const res = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt, context: profile }) }); const data = await res.json(); setMessages((m) => [...m, { role: 'assistant', content: data.message ?? '기록을 찾지 못했어요.' }]); } catch { setMessages((m) => [...m, { role: 'assistant', content: '잠시 후 다시 시도해 주세요.' }]); } finally { setLoading(false); } };
+  const askBot = async (preset?: string) => {
+    const prompt = (preset ?? input).trim();
+    if (!prompt || loading) return;
+    setInput('');
+    setMessages((m) => [...m, { role: 'user', content: prompt }]);
+    setLoading(true);
+    try {
+      const res = await fetch(`${basePath}/api/chat`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt, context: profile }) });
+      if (!res.ok) throw new Error('static-pages');
+      const data = await res.json();
+      setMessages((m) => [...m, { role: 'assistant', content: data.message ?? '기록을 찾지 못했어요.' }]);
+    } catch {
+      try {
+        const staticRes = await fetch(`${basePath}/ai-responses.json`);
+        const answers = await staticRes.json() as Record<string, string>;
+        const answer = answers[prompt] ?? localAnswer(prompt);
+        setMessages((m) => [...m, { role: 'assistant', content: answer }]);
+      } catch {
+        setMessages((m) => [...m, { role: 'assistant', content: localAnswer(prompt) }]);
+      }
+    } finally { setLoading(false); }
+  };
   return <main className="site-shell portfolio-page">
     <header className="topbar"><a className="brand" href="#top"><span className="brand-mark">효</span><span>HYOJE / 2026</span></a><button className="menu-toggle" type="button" aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation" onClick={() => setMobileMenuOpen((open) => !open)}>{mobileMenuOpen ? '닫기' : '메뉴'}</button><nav className="desktop-nav"><a href="#why">WHY ME</a><a href="#works">WORKS</a><a href="#proof">PROOF</a><a href={`${basePath}/ai-guide`}>AI GUIDE</a><button className="chat-pill" onClick={() => setChatOpen(true)}>효제에게 묻기 <span>↗</span></button></nav>{mobileMenuOpen && <nav className="mobile-nav" id="mobile-navigation"><a href="#about" onClick={() => setMobileMenuOpen(false)}>ABOUT ME</a><a href="#why" onClick={() => setMobileMenuOpen(false)}>WHY THIS IS ME</a><a href="#works" onClick={() => setMobileMenuOpen(false)}>WORKS</a><a href="#proof" onClick={() => setMobileMenuOpen(false)}>PROOF</a><a href="#next" onClick={() => setMobileMenuOpen(false)}>NEXT</a><a href={`${basePath}/ai-guide`} onClick={() => setMobileMenuOpen(false)}>AI GUIDE ↗</a></nav>}</header>
     <aside className="side-nav" aria-label="전체 목차"><span className="side-nav-title">HYOJE<br /><small>CONTENTS</small></span><div className="side-nav-group"><a href="#top"><b>01</b><span>INTRO</span></a><a href="#about"><b>02</b><span>ABOUT ME</span></a><a href="#why"><b>03</b><span>WHY THIS IS ME</span></a><a href="#journey"><b>04</b><span>JOURNEY</span></a><a href="#works"><b>05</b><span>WORKS</span></a><a href="#proof"><b>06</b><span>PROOF</span></a><a href="#next"><b>07</b><span>NEXT</span></a></div></aside>
