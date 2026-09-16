@@ -93,3 +93,7 @@
 .portfolio-page .project-demo-link { display:inline-flex; align-items:center; margin-left:8px; color:#1b64da; text-decoration:none; font-size:12px; font-weight:700; border-bottom:1px solid #3182f6 }
 .portfolio-page .project-demo-link:hover { color:#2272eb; border-bottom-color:#2272eb }
 @media(max-width:800px){.portfolio-page .project-demo-link{margin:8px 0 0; width:max-content}}
+
+/* Keep the AI control clear of the Netlify deployment badge. */
+.portfolio-page .floating-chat{bottom:84px!important}
+@media(max-width:800px){.portfolio-page .floating-chat{bottom:72px!important}}
