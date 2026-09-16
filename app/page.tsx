@@ -38,7 +38,7 @@ export default function Home() {
     try {
       const res = await fetch(`${basePath}/api/chat`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt, context: profile }) });
       if (!res.ok) throw new Error('static-pages');
-      const data = await res.json();
+      const data = await res.json() as { message?: string };
       setMessages((m) => [...m, { role: 'assistant', content: data.message ?? '기록을 찾지 못했어요.' }]);
     } catch {
       try {

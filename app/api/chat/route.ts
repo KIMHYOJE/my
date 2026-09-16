@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 
+type ChatResponse = { message?: string | { content?: string } } & { content?: string; choices?: Array<{ message?: { content?: string } }> };
+
 export async function POST(request: Request) {
   const key = process.env.POTENS_API_KEY;
   if (!key) return NextResponse.json({ message: '챗봇 API 키가 아직 연결되지 않았어요.' }, { status: 503 });
   try {
-    const { prompt, context } = await request.json();
+    const { prompt, context } = await request.json() as { prompt?: unknown; context?: unknown };
     if (!prompt || typeof prompt !== 'string') return NextResponse.json({ message: '질문을 입력해 주세요.' }, { status: 400 });
     const systemPrompt = `SYSTEM ROLE: 너는 '효제의 디지털 자기소개'를 설명하는 전용 AI 큐레이터다.
 작품의 핵심 주제: '디지털 기술을 활용하여 나를 표현한 창의적 콘텐츠'. 이 작품은 김효제의 2026년 1학기부터 여름방학까지의 실제 경험을 웹 인터랙션, 프로젝트 캡처, 수상 기록, AI 대화로 표현한다.
@@ -32,7 +34,7 @@ export async function POST(request: Request) {
 
 위 규칙에 따라 작품 안에서 답변해.` }) });
     if (!response.ok) return NextResponse.json({ message: 'AI 응답을 가져오지 못했어요. 잠시 후 다시 시도해 주세요.' }, { status: 502 });
-    const data = await response.json();
+    const data = await response.json() as ChatResponse;
     const message = typeof data.message === 'string' ? data.message : typeof data.content === 'string' ? data.content : data.message?.content ?? data.choices?.[0]?.message?.content;
     return NextResponse.json({ message: message ?? '응답 내용이 비어 있어요. 질문을 조금 더 구체적으로 적어 보세요.' });
   } catch { return NextResponse.json({ message: '챗봇 연결 중 문제가 발생했어요.' }, { status: 500 }); }
