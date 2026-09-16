@@ -1,0 +1,45 @@
+{
+  "approved": true,
+  "authority": {
+    "identifier": "kimhyoje-project-owner",
+    "role": "project-owner"
+  },
+  "checkpoint_receipt_sha256": "6adedda527045ad253931ff7cc2c403f0f44fc35d7f9777acc854b750b267cfa",
+  "destination": {
+    "design_md_sha256": "8ca2e6ca6d46346bf789e454993390e506b6ad8b3171da0a52a28a79c860d247",
+    "system_tree_sha256": "149a87d8db65e245ff1599da1bffe5365df32e281012fa17fd532f95af0d151b"
+  },
+  "kind": "design-md-core-project-adoption-report",
+  "previous": {
+    "design_md": {
+      "present": false,
+      "sha256": null
+    },
+    "system": {
+      "present": false,
+      "tree_sha256": null
+    }
+  },
+  "project_proof": {
+    "authority_mode": "core-v2-project-system",
+    "pass": true,
+    "profile": "portable-core",
+    "sha256": "9361443ccc143b4bacfc74838ee36886eee655005538cc44b4d0e44c985f1027"
+  },
+  "recovery": {
+    "action": null,
+    "recovered": false
+  },
+  "report_path": ".omd/adoptions/31bd7bc474ee2a03.json",
+  "schema_version": "2.0.0",
+  "source_package": {
+    "adoption_receipt_sha256": "b119f44fab702c931dcd41c418b09b547ddae4514132f6902cfee348c97790f7",
+    "coverage_sha256": "71a9d21db42d6c92cf8d08354380587c7a46bcc52262f1f39287a49509ac6b9f",
+    "design_md_sha256": "8ca2e6ca6d46346bf789e454993390e506b6ad8b3171da0a52a28a79c860d247",
+    "graph_sha256": "70b48e13c357a8527ddbc2c4b6bd367de05001ac57d0cd19d11f3a16e53206cb",
+    "manifest_sha256": "cb7f97429094814fa8524807ef6a41f1f66851b98c1a081a8420cc9f43175037",
+    "provenance_sha256": "87de37be3b90c11ceb7a5e054a4f3c087bfcbc1bd54e348e1f3592482f1a88d4"
+  },
+  "status": "adopted",
+  "transaction_id": "31bd7bc474ee2a03"
+}

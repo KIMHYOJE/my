@@ -1,0 +1,27 @@
+{
+  "attestation": {
+    "authority": {
+      "identifier": "kimhyoje-project-owner",
+      "role": "project-owner"
+    },
+    "authority_transition_approved": true,
+    "decision": "approved",
+    "request_sha256": "b03517a695189648ed66a554147726f93031f75f6add2574831cc90cb907a652"
+  },
+  "kind": "design-md-core-project-adoption-checkpoint",
+  "request": {
+    "kind": "design-md-core-project-adoption-checkpoint-request",
+    "schema_version": "2.0.0",
+    "source_package": {
+      "adoption_receipt_sha256": "38f3e62219d9d4e8f5f099993716707c347f724fe714270738ffe53d1ec322d9",
+      "coverage_sha256": "b5482d792425eb814c2df14ad92333ba2e72a612ded1415c69ddaa95abcae79b",
+      "design_md_sha256": "e8e44e5e8d29469e933648957a475a93d7b6b9f8bd47147edbe79facefdbb19e",
+      "graph_sha256": "94111947f92950b69353798aedc1a344cb678239e8bfb34b7f98a671e12460cd",
+      "manifest_sha256": "705aea3b430e87263575f86e5c1f0c7443ff57fc2a9a9b99dc6de67c400a29c0",
+      "provenance_sha256": "01f5473d011309c6d5f8e234c842773dc7ef1aac176924048e4677a42356f947"
+    },
+    "source_package_tree_sha256": "4f05a58530bf452a0c7d3a727adcf66dc09e8a7bd3f1450b8d2dfe97339d4b62",
+    "status": "approval-required"
+  },
+  "schema_version": "2.0.0"
+}

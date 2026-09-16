@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import './ai-guide.css';
 
 export default function AIGuide() {

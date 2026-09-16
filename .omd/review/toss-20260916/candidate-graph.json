@@ -1,0 +1,470 @@
+{
+  "$schema": "https://oh-my-design.kr/schema/design-system-graph-v2.schema.json",
+  "components_states": {
+    "components": [
+      {
+        "anatomy": [
+          "label",
+          "optional-leading-or-trailing-icon"
+        ],
+        "id": "primary-action",
+        "interaction": {
+          "kind": "interactive",
+          "state_applicability": {
+            "default": {
+              "applicability": "applicable"
+            },
+            "disabled": {
+              "applicability": "applicable"
+            },
+            "error": {
+              "applicability": "applicable"
+            },
+            "focus-visible": {
+              "applicability": "applicable"
+            },
+            "hover": {
+              "applicability": "applicable"
+            },
+            "loading": {
+              "applicability": "applicable"
+            },
+            "success": {
+              "applicability": "applicable"
+            }
+          }
+        },
+        "semantics": "다음 섹션 이동·AI 열기·원본 열람처럼 목적이 분명한 행동",
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "disabled",
+          "loading",
+          "error",
+          "success"
+        ],
+        "token_refs": [
+          "color-primary",
+          "color-primary-hover",
+          "radius-control"
+        ],
+        "variants": [
+          "filled-blue",
+          "text-link"
+        ]
+      },
+      {
+        "anatomy": [
+          "section-number",
+          "section-label"
+        ],
+        "id": "section-navigation",
+        "interaction": {
+          "kind": "interactive",
+          "state_applicability": {
+            "default": {
+              "applicability": "applicable"
+            },
+            "disabled": {
+              "applicability": "not-applicable",
+              "reason": "현재 문서의 섹션 링크는 비활성 상태를 제공하지 않는다"
+            },
+            "error": {
+              "applicability": "not-applicable",
+              "reason": "문서 내 앵커 이동은 오류 상태가 없다"
+            },
+            "focus-visible": {
+              "applicability": "applicable"
+            },
+            "hover": {
+              "applicability": "applicable"
+            },
+            "loading": {
+              "applicability": "not-applicable",
+              "reason": "문서 내 앵커 이동은 로딩 상태가 없다"
+            },
+            "success": {
+              "applicability": "not-applicable",
+              "reason": "문서 내 앵커 이동은 성공 피드백을 별도로 표시하지 않는다"
+            }
+          }
+        },
+        "semantics": "페이지 내 섹션으로 이동하는 목차",
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "disabled",
+          "loading",
+          "error",
+          "success"
+        ],
+        "token_refs": [
+          "color-primary",
+          "color-border"
+        ],
+        "variants": [
+          "desktop-sidebar",
+          "mobile-menu"
+        ]
+      },
+      {
+        "anatomy": [
+          "contained-image",
+          "caption",
+          "open-original-action"
+        ],
+        "id": "evidence-viewer",
+        "interaction": {
+          "kind": "interactive",
+          "state_applicability": {
+            "default": {
+              "applicability": "applicable"
+            },
+            "disabled": {
+              "applicability": "not-applicable",
+              "reason": "제공된 증빙은 열람 가능 여부만 표현한다"
+            },
+            "error": {
+              "applicability": "not-applicable",
+              "reason": "정적 자산의 오류 상태는 별도 범위가 아니다"
+            },
+            "focus-visible": {
+              "applicability": "applicable"
+            },
+            "hover": {
+              "applicability": "applicable"
+            },
+            "loading": {
+              "applicability": "not-applicable",
+              "reason": "정적 프로젝트 자산은 로딩 UI를 별도 제공하지 않는다"
+            },
+            "success": {
+              "applicability": "not-applicable",
+              "reason": "원본 열람은 성공 배지를 표시하지 않는다"
+            }
+          }
+        },
+        "semantics": "결과물 이미지를 잘리지 않게 보여주고 원본을 크게 열람",
+        "states": [
+          "default",
+          "hover",
+          "focus-visible",
+          "disabled",
+          "loading",
+          "error",
+          "success"
+        ],
+        "token_refs": [
+          "color-canvas",
+          "color-border"
+        ],
+        "variants": [
+          "portrait",
+          "landscape",
+          "pdf-link"
+        ]
+      }
+    ],
+    "rules": [
+      "이미지 클릭 또는 명시적인 원본 링크로 큰 화면 열람을 제공한다",
+      "장식 아이콘만으로 의미를 전달하지 않는다",
+      "키보드 포커스 링을 제거하지 않는다"
+    ]
+  },
+  "content_locales": {
+    "locales": [
+      {
+        "locale": "ko-KR",
+        "rules": [
+          "한국어를 기본 언어로 사용",
+          "영문 프로젝트명과 기술명은 원문 표기"
+        ],
+        "status": "supported"
+      }
+    ],
+    "terminology": {
+      "OceanSnap": "부울경 AI 해커톤에서 고려·참가한 해양 쓰레기 분석 아이디어",
+      "게임잼": "Unity로 게임 콘텐츠를 제작하고 대상을 수상한 프로젝트",
+      "오늘의 식단": "React·TypeScript 기반 팀 웹앱 화면 제작 프로젝트"
+    },
+    "voice": [
+      "짧고 구체적으로 쓴다",
+      "무엇을 만들었는지와 실제 근거를 먼저 말한다",
+      "확인되지 않은 내용은 말하지 않는다",
+      "성과를 과장하지 않는다"
+    ]
+  },
+  "experience": {
+    "avoid": [
+      "과도한 카드와 그라데이션",
+      "장식용 아이콘 남용",
+      "추상적인 AI 문장과 성장 서사",
+      "이미지 임의 크롭",
+      "학내 공지사항 Discord 자동 알림 프로젝트",
+      "실제 기록에 없는 사용자 수·성과·수상·역할"
+    ],
+    "design_direction": [
+      "Toss 레퍼런스의 넓은 여백과 강한 한 문장 구조를 자기표현 포트폴리오에 맞게 변형",
+      "흰색 캔버스·검정 텍스트·Toss 계열 블루의 제한된 색상",
+      "결과물 이미지는 잘리지 않도록 contain 중심으로 크게 표시",
+      "PC 고정 사이드바와 모바일 접이식 메뉴",
+      "스크롤·진입 모션은 서사를 돕는 수준으로 제한"
+    ],
+    "primary_tasks": [
+      "김효제가 어떤 사람인지 한 문장으로 이해하기",
+      "5개 프로젝트의 제작 결과와 직접 한 일을 확인하기",
+      "포스터·웹앱·AI 기획 자료·수상 사진·수료증을 원본으로 열람하기"
+    ],
+    "principles": [
+      "주장보다 실제 결과물을 먼저 보여준다",
+      "각 프로젝트에서 무엇을 만들었는가·왜 시작했는가·내가 직접 한 일·도구와 기술·실제 결과물·나를 보여주는 점을 구분한다",
+      "OceanSnap은 해커톤에서 고려·참가한 아이디어로만 표현한다",
+      "AI 메이커스랩과 OceanSnap을 별도 프로젝트로 유지한다",
+      "게임잼은 Unity와 대상 수상으로 정확히 표현하고 React·Next.js·TypeScript와 섞지 않는다",
+      "확인되지 않은 역할·성과 수치·활동은 추가하지 않는다"
+    ],
+    "summary": "관찰한 것을 디자인하고, 궁금한 것을 웹·AI·Unity 결과물로 만들며, 실제 기록으로 나를 설명하는 포트폴리오"
+  },
+  "foundations": {
+    "contrast_pairs": [
+      {
+        "background": "#ffffff",
+        "foreground": "#191f28",
+        "minimum_ratio": 4.5
+      },
+      {
+        "background": "#3182f6",
+        "foreground": "#ffffff",
+        "minimum_ratio": 4.5
+      }
+    ],
+    "reduced_motion": true,
+    "rules": [
+      "색상은 캔버스·텍스트·보조 텍스트·블루 액션·구분선 역할로 제한한다",
+      "깊이감은 평면 레이어와 구분선 중심으로 만들고 장식용 그림자는 사용하지 않는다",
+      "이미지 증빙은 object-fit: contain과 원본 보기 링크를 우선한다",
+      "본문과 액션의 명도 대비는 WCAG AA 이상을 목표로 한다"
+    ],
+    "tokens": {
+      "color-body": {
+        "$description": "보조 본문 텍스트",
+        "$type": "color",
+        "$value": "#4e5968"
+      },
+      "color-border": {
+        "$description": "구분선",
+        "$type": "color",
+        "$value": "#e5e8eb"
+      },
+      "color-canvas": {
+        "$description": "주 캔버스",
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "color-foreground": {
+        "$description": "검정에 가까운 본문·제목 텍스트",
+        "$type": "color",
+        "$value": "#191f28"
+      },
+      "color-muted": {
+        "$description": "메타 정보",
+        "$type": "color",
+        "$value": "#8b95a1"
+      },
+      "color-primary": {
+        "$description": "Toss 계열 인터랙션 블루",
+        "$type": "color",
+        "$value": "#3182f6"
+      },
+      "color-primary-hover": {
+        "$description": "주요 액션 hover",
+        "$type": "color",
+        "$value": "#2272eb"
+      },
+      "color-weak-background": {
+        "$description": "약한 블루 배경",
+        "$type": "color",
+        "$value": "#e8f3ff"
+      },
+      "radius-control": {
+        "$description": "작고 절제된 컨트롤 모서리",
+        "$type": "dimension",
+        "$value": "10px"
+      },
+      "space-content": {
+        "$description": "콘텐츠 내부 여백",
+        "$type": "dimension",
+        "$value": "clamp(24px, 4vw, 72px)"
+      },
+      "space-section": {
+        "$description": "섹션 간 넓은 호흡",
+        "$type": "dimension",
+        "$value": "clamp(96px, 14vw, 220px)"
+      }
+    }
+  },
+  "governance": {
+    "change_policy": [
+      "DESIGN.md를 먼저 검토·승인한 뒤에만 app/과 public/의 UI를 수정한다",
+      "기존 기능과 콘텐츠를 보존하고 파일별 변경 범위를 사전에 제시한다",
+      "새 성과·역할·수치는 저장소 증거가 있을 때만 추가한다"
+    ],
+    "decisions": [
+      {
+        "evidence": [
+          "사용자 디자인 목표: Toss처럼 넓은 여백과 강한 한 문장 중심"
+        ],
+        "path": "/experience/design_direction/0",
+        "source_class": "prompt-fact",
+        "value": "Toss 레퍼런스의 넓은 여백과 강한 한 문장 구조를 자기표현 포트폴리오에 맞게 변형"
+      },
+      {
+        "evidence": [
+          ".codex/data/references/toss/DESIGN.md의 verified_v2 TDS primary token"
+        ],
+        "path": "/foundations/tokens/color-primary/$value",
+        "source_class": "verified-reference-inspiration",
+        "value": "#3182f6"
+      },
+      {
+        "evidence": [
+          "사용자 제외 조건: OceanSnap을 수상 프로젝트처럼 표현하지 말 것"
+        ],
+        "path": "/experience/principles/2",
+        "source_class": "prompt-fact",
+        "value": "OceanSnap은 해커톤에서 고려·참가한 아이디어로만 표현한다"
+      },
+      {
+        "evidence": [
+          "사용자 필수 콘텐츠 및 제외 조건"
+        ],
+        "path": "/experience/principles/4",
+        "source_class": "prompt-fact",
+        "value": "게임잼은 Unity와 대상 수상으로 정확히 표현하고 React·Next.js·TypeScript와 섞지 않는다"
+      },
+      {
+        "evidence": [
+          "app/page.tsx projects[meal]",
+          "README.md 프로젝트 표"
+        ],
+        "path": "/content_locales/terminology/오늘의 식단",
+        "source_class": "repository-fact",
+        "value": "React·TypeScript 기반 팀 웹앱 화면 제작 프로젝트"
+      }
+    ],
+    "priority": [
+      "저장소와 사용자 요청의 사실성",
+      "실제 결과물의 가시성",
+      "접근성",
+      "Toss 방향의 시각적 절제"
+    ],
+    "unknown_policy": "absent-at-smallest-unresolved-boundary"
+  },
+  "identity": {
+    "kind": "project-system",
+    "name": "김효제 디지털 자기표현 포트폴리오",
+    "scope": "공모전 출품작 웹 포트폴리오의 시각·콘텐츠·접근성 시스템"
+  },
+  "layout_platforms": {
+    "minimum_width_px": 320,
+    "platforms": [
+      {
+        "id": "web",
+        "rules": [
+          "반응형 웹 페이지",
+          "키보드·터치·스크린 리더 사용 지원"
+        ]
+      },
+      {
+        "id": "desktop",
+        "rules": [
+          "고정 사이드바와 넓은 case study 영역"
+        ]
+      },
+      {
+        "id": "windows",
+        "rules": [
+          "최소 320px 콘텐츠 폭 기준"
+        ]
+      }
+    ],
+    "reflow_zoom_percent": 200,
+    "rules": [
+      "PC는 고정 사이드바와 넓은 본문 영역을 사용한다",
+      "모바일은 메뉴를 접고 콘텐츠를 단일 열로 재배치한다",
+      "320px과 200% 확대에서도 가로 스크롤 없이 읽을 수 있어야 한다",
+      "프로젝트 결과물은 세로·가로 비율을 존중해 contain으로 배치한다",
+      "스크롤 진입 모션은 prefers-reduced-motion에서 제거한다"
+    ]
+  },
+  "projection": {
+    "locale": "en",
+    "path": "DESIGN.md",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "schema_version": "2.0.0",
+  "typography_assets": {
+    "assets": [
+      {
+        "id": "project-evidence-images",
+        "kind": "image",
+        "license_status": "unresolved",
+        "notes": "저장소에 제공된 포스터·로고·웹앱·AI 자료·게임잼 이미지",
+        "source": "public/evidence",
+        "source_status": "project-owned"
+      },
+      {
+        "id": "certificate-pdf",
+        "kind": "other",
+        "license_status": "unresolved",
+        "notes": "별도 열람 링크로 연결",
+        "source": "public/evidence/certificate-hyoje.pdf",
+        "source_status": "user-provided"
+      }
+    ],
+    "roles": [
+      {
+        "family": "Pretendard, system-ui, sans-serif",
+        "id": "display",
+        "line_height": "1.08",
+        "size": "clamp(42px, 7vw, 92px)",
+        "tracking": "-0.04em",
+        "usage": "INTRO와 섹션의 강한 한 문장",
+        "weight": 700
+      },
+      {
+        "family": "Pretendard, system-ui, sans-serif",
+        "id": "heading",
+        "line_height": "1.15",
+        "size": "clamp(28px, 4vw, 56px)",
+        "tracking": "-0.03em",
+        "usage": "프로젝트 제목과 섹션 제목",
+        "weight": 700
+      },
+      {
+        "family": "Pretendard, system-ui, sans-serif",
+        "id": "body",
+        "line_height": "1.7",
+        "size": "16px",
+        "tracking": "-0.01em",
+        "usage": "프로젝트 설명과 내러티브",
+        "weight": 400
+      },
+      {
+        "family": "Pretendard, system-ui, sans-serif",
+        "id": "meta",
+        "line_height": "1.4",
+        "size": "12px",
+        "tracking": "0.08em",
+        "usage": "섹션 라벨·도구·상태",
+        "weight": 600
+      }
+    ],
+    "rules": [
+      "Toss Product Sans는 레퍼런스의 증거 기반 영감으로만 기록하고, 프로젝트에 재배포 권한이 확인되지 않은 폰트는 직접 포함하지 않는다",
+      "한국어 본문은 저장소에서 이미 사용하는 시스템 폴백을 우선한다"
+    ]
+  }
+}

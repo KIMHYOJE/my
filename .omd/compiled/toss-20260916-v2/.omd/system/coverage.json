@@ -1,0 +1,103 @@
+{
+  "checks": {
+    "assets_fonts_licenses": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": false
+    },
+    "bound_system_authority": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": false
+    },
+    "component_state_coverage": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "contrast": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "implementation_contract_complete": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "opaque_extension_preservation": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "portable_core_structure": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "reduced_motion": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "responsive_320_200": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "token_reference_closure": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "unknown_absence": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    }
+  },
+  "design_md_sha256": "32cd7bf4bf316ffb0aaf8e2aca637f532595adc5f681388b6d3c7929fc1d9f3a",
+  "graph_sha256": "c45e3aea54f76eb017cc13ab03d2e99871908d0a2d129d51b4c4f33714d144f3",
+  "groups": {
+    "components-states": {
+      "evidence": [
+        "app/page.tsx 인터랙션 목록",
+        "Core component state contract"
+      ],
+      "status": "covered"
+    },
+    "content-locales": {
+      "evidence": [
+        "app/page.tsx 프로젝트 데이터",
+        "README.md와 작품설명서"
+      ],
+      "status": "covered"
+    },
+    "experience": {
+      "evidence": [
+        "사용자 요청",
+        "README.md",
+        "docs/작품설명서.md"
+      ],
+      "status": "covered"
+    },
+    "foundations": {
+      "evidence": [
+        "Toss reference DESIGN.md",
+        "사용자 색상·여백·모션 목표"
+      ],
+      "status": "covered"
+    },
+    "governance": {
+      "evidence": [
+        "사용자 보존·검토 지시",
+        "저장소 현재 상태"
+      ],
+      "status": "covered"
+    },
+    "layout-platforms": {
+      "evidence": [
+        "app/enhancements.css 반응형 규칙",
+        "사용자 PC·모바일 목표"
+      ],
+      "status": "covered"
+    },
+    "typography-assets": {
+      "evidence": [
+        "app/globals.css",
+        "public/evidence 자산 목록"
+      ],
+      "status": "covered"
+    }
+  },
+  "schema_version": "2.0.0"
+}

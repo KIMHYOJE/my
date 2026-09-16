@@ -1,0 +1,103 @@
+{
+  "checks": {
+    "assets_fonts_licenses": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "bound_system_authority": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "component_state_coverage": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "contrast": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "implementation_contract_complete": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "opaque_extension_preservation": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "portable_core_structure": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "reduced_motion": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "responsive_320_200": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "token_reference_closure": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    },
+    "unknown_absence": {
+      "method": "controller-computed-system-graph-v2",
+      "pass": true
+    }
+  },
+  "design_md_sha256": "e8e44e5e8d29469e933648957a475a93d7b6b9f8bd47147edbe79facefdbb19e",
+  "graph_sha256": "94111947f92950b69353798aedc1a344cb678239e8bfb34b7f98a671e12460cd",
+  "groups": {
+    "components-states": {
+      "evidence": [
+        "app/page.tsx",
+        ".codex/data/scripts/design-md-core-schema.cjs"
+      ],
+      "status": "covered"
+    },
+    "content-locales": {
+      "evidence": [
+        "app/page.tsx",
+        "README.md",
+        "docs/작품설명서.md"
+      ],
+      "status": "covered"
+    },
+    "experience": {
+      "evidence": [
+        "README.md",
+        "docs/작품설명서.md"
+      ],
+      "status": "covered"
+    },
+    "foundations": {
+      "evidence": [
+        ".codex/data/references/toss/DESIGN.md",
+        "app/globals.css"
+      ],
+      "status": "covered"
+    },
+    "governance": {
+      "evidence": [
+        "README.md",
+        ".agents/skills/omd-init/SKILL.md"
+      ],
+      "status": "covered"
+    },
+    "layout-platforms": {
+      "evidence": [
+        "app/enhancements.css",
+        "app/portfolio.css"
+      ],
+      "status": "covered"
+    },
+    "typography-assets": {
+      "evidence": [
+        "app/globals.css",
+        "public/evidence/cozycoffee-poster.png"
+      ],
+      "status": "covered"
+    }
+  },
+  "schema_version": "2.0.0"
+}

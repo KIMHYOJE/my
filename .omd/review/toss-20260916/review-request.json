@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "candidate_design_md": {
+      "bytes": 11574,
+      "path": "DESIGN.md",
+      "sha256": "24728446a7f997e13c2960f8d9ba24d8389c2a9bcf4d84f541244a850e0adc4d"
+    },
+    "candidate_graph": {
+      "bytes": 15704,
+      "path": "candidate-graph.json",
+      "sha256": "47ce9a86564016f6430ea124538fa604cafdb57ce9ada57cbaf9e4d3cf3e8f02"
+    },
+    "coverage": {
+      "bytes": 2185,
+      "path": "coverage.json",
+      "sha256": "56d27e636f48137a3ca8a297fbe81e73f1a664933c0ad52c79c2e54a5aa12961"
+    },
+    "input_graph": {
+      "bytes": 12151,
+      "path": "input-graph.json",
+      "sha256": "5afe6921d1a84f2fbd87c0d16c96bebdc7c3f789f4509608a287c9bb227decda"
+    },
+    "provenance": {
+      "bytes": 2020,
+      "path": "provenance.json",
+      "sha256": "e8790e4d08256d6e1f92d04dce1469789c5294d26a58a2dda089c3dbd5ed5ed9"
+    }
+  },
+  "authority": {
+    "authority_transition_approved": false,
+    "canonical": false,
+    "state": "non-authoritative-candidate"
+  },
+  "candidate": {
+    "design_md_sha256": "24728446a7f997e13c2960f8d9ba24d8389c2a9bcf4d84f541244a850e0adc4d",
+    "normalized_graph_sha256": "47ce9a86564016f6430ea124538fa604cafdb57ce9ada57cbaf9e4d3cf3e8f02",
+    "projection_binding": "pending-owner-review-and-compiler-adoption"
+  },
+  "inputs": {
+    "coverage_sha256": "56d27e636f48137a3ca8a297fbe81e73f1a664933c0ad52c79c2e54a5aa12961",
+    "graph_sha256": "5afe6921d1a84f2fbd87c0d16c96bebdc7c3f789f4509608a287c9bb227decda",
+    "provenance_sha256": "e8790e4d08256d6e1f92d04dce1469789c5294d26a58a2dda089c3dbd5ed5ed9"
+  },
+  "kind": "design-md-core-review-request",
+  "loss_evidence": {
+    "migration": {
+      "required": false
+    },
+    "source": {
+      "exact_input_bytes_preserved": true,
+      "input_graph_sha256": "5afe6921d1a84f2fbd87c0d16c96bebdc7c3f789f4509608a287c9bb227decda"
+    }
+  },
+  "required_decision": {
+    "explicit_authority_transition": true,
+    "review_exact_candidate_preview": true,
+    "reviewer_role": "project-owner"
+  },
+  "schema_version": "2.0.0",
+  "status": "review-required"
+}

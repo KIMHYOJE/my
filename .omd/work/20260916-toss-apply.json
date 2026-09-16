@@ -1,0 +1,22 @@
+{
+  "intent": "implement",
+  "task": "채택된 Toss 기반 DESIGN.md를 기존 김효제 자기표현 포트폴리오에 적용",
+  "consumer_route": "/",
+  "acceptance": ["Toss 계열 흰색·검정·블루와 넓은 여백", "PC 고정 사이드바 및 모바일 접이식 메뉴", "5개 프로젝트의 6개 정보 구분", "결과물 contain 표시 및 원본 확대", "기존 AI 챗봇·앵커·사실 카피 보존", "prefers-reduced-motion 지원"],
+  "protected_behaviors": ["AI 챗봇 열기·질문·닫기", "섹션 앵커 이동", "수료증 PDF 별도 열람", "기존 public/evidence 자산과 프로젝트 사실"],
+  "protected_contract": {
+    "cardinality": ["projects=5", "proof records=3", "chat panel=1"],
+    "state_transitions": ["chat closed → open button → chat panel", "mobile menu closed → menu button → navigation menu"],
+    "facts": ["OceanSnap은 수상작이 아님", "게임잼은 Unity 및 대상 수상", "오늘의 식단은 React·TypeScript 팀 프로젝트", "TOPCIT 230점", "수료증 PDF 링크"],
+    "change_authority": "original-user-task-only"
+  },
+  "visual_equity": [
+    { "identity": "실제 결과물을 설명 옆에 배치", "user_value": "작품 주장을 이미지 근거와 바로 비교", "before_evidence": "app/page.tsx case-detail 구조", "decision": "reinforce", "change_authority": "explicit DESIGN.md rule" },
+    { "identity": "프로젝트별 번호와 섹션 목차", "user_value": "긴 포트폴리오의 위치를 파악", "before_evidence": "app/page.tsx side-nav 및 project no", "decision": "reinforce", "change_authority": "explicit DESIGN.md rule" }
+  ],
+  "evidence": ["DESIGN.md", "app/page.tsx", "app/final-overrides.css", "README.md", "docs/작품설명서.md"],
+  "unknowns": ["브라우저 기반 390px·320px·200% 실측은 이번 변경 후 별도 확인 필요"],
+  "implementation_owner": "main-agent",
+  "verification": { "routes": ["/"], "viewports": ["desktop", "390px", "320px"], "states": ["menu closed/open", "chat closed/open", "lightbox closed/open"], "commands": ["npm run lint", "npm run build"] },
+  "first_safe_edit": { "target": "app/final-overrides.css", "smallest_useful_change": "기존 최종 override 아래에 채택 토큰 기반 레이아웃·contain·접근성 규칙 추가", "protected_contract_effect": "none", "acceptance_check": "기존 JSX hook을 변경하지 않고 desktop sidebar와 image contain 규칙이 존재하는지 확인" }
+}

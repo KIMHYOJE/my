@@ -1,0 +1,77 @@
+{
+  "decisions": [
+    {
+      "evidence": [
+        "README.md"
+      ],
+      "path": "/identity/name",
+      "source_class": "prompt-fact",
+      "value": "김효제 디지털 자기표현 포트폴리오"
+    },
+    {
+      "evidence": [
+        "README.md",
+        "docs/작품설명서.md"
+      ],
+      "path": "/experience/summary",
+      "source_class": "prompt-fact",
+      "value": "관찰한 것을 디자인하고, 궁금한 것을 웹·AI·Unity 결과물로 만들며, 실제 기록으로 나를 설명하는 포트폴리오"
+    },
+    {
+      "evidence": [
+        "README.md",
+        "docs/작품설명서.md"
+      ],
+      "path": "/experience/principles/0",
+      "source_class": "prompt-fact",
+      "value": "주장보다 실제 결과물을 먼저 보여준다"
+    },
+    {
+      "evidence": [
+        "README.md",
+        "app/page.tsx"
+      ],
+      "path": "/experience/principles/2",
+      "source_class": "prompt-fact",
+      "value": "OceanSnap은 해커톤에서 고려·참가한 아이디어로만 표현한다"
+    },
+    {
+      "evidence": [
+        "README.md",
+        "app/page.tsx"
+      ],
+      "path": "/experience/principles/3",
+      "source_class": "prompt-fact",
+      "value": "AI 메이커스랩과 OceanSnap을 별도 프로젝트로 유지한다"
+    },
+    {
+      "evidence": [
+        "README.md",
+        "app/page.tsx"
+      ],
+      "path": "/experience/principles/4",
+      "source_class": "prompt-fact",
+      "value": "게임잼은 Unity와 대상 수상으로 정확히 표현하고 React·Next.js·TypeScript와 섞지 않는다"
+    },
+    {
+      "evidence": [
+        ".codex/data/references/toss/DESIGN.md"
+      ],
+      "path": "/foundations/tokens/color-primary/$value",
+      "source_class": "verified-reference-inspiration",
+      "value": "#3182f6"
+    },
+    {
+      "evidence": [
+        "app/page.tsx",
+        "README.md"
+      ],
+      "path": "/content_locales/terminology/오늘의 식단",
+      "source_class": "repository-fact",
+      "value": "React·TypeScript 기반 팀 웹앱 화면 제작 프로젝트"
+    }
+  ],
+  "design_md_sha256": "06ee25559bcf12cf48e0884bfac719bb01b16d4588a9047b85c137cc52961003",
+  "graph_sha256": "5afc51333d0318e3bf4d29584cb22c5b5c7725f2345f67beaa5bba8599ce0b87",
+  "schema_version": "2.0.0"
+}

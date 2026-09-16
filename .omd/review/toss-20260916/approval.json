@@ -1,0 +1,28 @@
+{
+  "authority_transition_approved": true,
+  "candidate": {
+    "design_md_sha256": "24728446a7f997e13c2960f8d9ba24d8389c2a9bcf4d84f541244a850e0adc4d",
+    "exact_preview_reviewed": true,
+    "normalized_graph_sha256": "47ce9a86564016f6430ea124538fa604cafdb57ce9ada57cbaf9e4d3cf3e8f02"
+  },
+  "decision": "approved",
+  "inputs": {
+    "candidate_design_md_sha256": "24728446a7f997e13c2960f8d9ba24d8389c2a9bcf4d84f541244a850e0adc4d",
+    "coverage_sha256": "56d27e636f48137a3ca8a297fbe81e73f1a664933c0ad52c79c2e54a5aa12961",
+    "graph_sha256": "5afe6921d1a84f2fbd87c0d16c96bebdc7c3f789f4509608a287c9bb227decda",
+    "normalized_candidate_graph_sha256": "47ce9a86564016f6430ea124538fa604cafdb57ce9ada57cbaf9e4d3cf3e8f02",
+    "provenance_sha256": "e8790e4d08256d6e1f92d04dce1469789c5294d26a58a2dda089c3dbd5ed5ed9",
+    "review_request_sha256": "5a4627dfd2967a7230aeaccfd120650c67a8db0655c64d2c3840714a6f950ae7"
+  },
+  "kind": "design-md-core-adoption-review",
+  "review_request": {
+    "path": "review-request.json",
+    "sha256": "5a4627dfd2967a7230aeaccfd120650c67a8db0655c64d2c3840714a6f950ae7",
+    "status_reviewed": "review-required"
+  },
+  "reviewer": {
+    "identifier": "kimhyoje-project-owner",
+    "role": "project-owner"
+  },
+  "schema_version": "2.0.0"
+}

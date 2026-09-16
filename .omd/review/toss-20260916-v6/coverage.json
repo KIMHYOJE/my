@@ -1,0 +1,27 @@
+{
+  "schema_version": "2.0.0",
+  "design_md_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "graph_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "groups": {
+    "experience": { "status": "covered", "evidence": ["README.md", "docs/작품설명서.md"] },
+    "foundations": { "status": "covered", "evidence": [".codex/data/references/toss/DESIGN.md", "app/globals.css"] },
+    "typography-assets": { "status": "covered", "evidence": ["app/globals.css", "public/evidence/cozycoffee-poster.png"] },
+    "components-states": { "status": "covered", "evidence": ["app/page.tsx", ".codex/data/scripts/design-md-core-schema.cjs"] },
+    "layout-platforms": { "status": "covered", "evidence": ["app/enhancements.css", "app/portfolio.css"] },
+    "content-locales": { "status": "covered", "evidence": ["app/page.tsx", "README.md", "docs/작품설명서.md"] },
+    "governance": { "status": "covered", "evidence": ["README.md", ".agents/skills/omd-init/SKILL.md"] }
+  },
+  "checks": {
+    "portable_core_structure": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "bound_system_authority": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "token_reference_closure": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "contrast": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "component_state_coverage": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "responsive_320_200": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "reduced_motion": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "assets_fonts_licenses": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "implementation_contract_complete": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "unknown_absence": { "pass": true, "method": "controller-computed-system-graph-v2" },
+    "opaque_extension_preservation": { "pass": true, "method": "controller-computed-system-graph-v2" }
+  }
+}

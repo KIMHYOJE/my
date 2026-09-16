@@ -1,0 +1,39 @@
+{
+  "$schema": "https://oh-my-design.kr/schema/design-md-core-manifest-v2.schema.json",
+  "artifacts": {
+    "coverage": {
+      "path": ".omd/system/coverage.json",
+      "sha256": "10862b169d543222f1739d5a2b5e0cb65e8c4cc6437884383c4aed4cc9580c35"
+    },
+    "design_md": {
+      "path": "DESIGN.md",
+      "sha256": "06ee25559bcf12cf48e0884bfac719bb01b16d4588a9047b85c137cc52961003"
+    },
+    "graph": {
+      "path": ".omd/system/graph.json",
+      "sha256": "5afc51333d0318e3bf4d29584cb22c5b5c7725f2345f67beaa5bba8599ce0b87"
+    },
+    "provenance": {
+      "path": ".omd/system/provenance.json",
+      "sha256": "f7f598d6df5490b79557391eda367582019bb330ef7d7252182a4936126e0c88"
+    }
+  },
+  "authority": {
+    "canonical": "system-graph",
+    "graph_path": ".omd/system/graph.json",
+    "projection_path": "DESIGN.md"
+  },
+  "format": "design-md-core",
+  "format_version": "2.0.0",
+  "profile": "portable-core",
+  "schema_version": "2.0.0",
+  "section_order": [
+    "experience",
+    "foundations",
+    "typography-assets",
+    "components-states",
+    "layout-platforms",
+    "content-locales",
+    "governance"
+  ]
+}

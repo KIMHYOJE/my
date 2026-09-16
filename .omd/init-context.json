@@ -1,0 +1,26 @@
+{
+  "reference_id": "toss",
+  "description": "울산대학교 ICT융합학부 1학년 김효제의 디지털 기술을 활용해 나를 표현한 창의적 콘텐츠 공모전 출품작. Toss처럼 넓은 여백과 강한 한 문장, 흰색 기반, 검정 텍스트와 Toss 계열 블루, 실제 결과물 중심의 포트폴리오",
+  "mode": "inspired",
+  "delta_set": {
+    "axes": {
+      "color.hue_deg": "Toss 계열 블루를 주 액센트로 유지",
+      "color.saturation_pct": "제한된 색상 예산으로 절제",
+      "color.lightness_pct": "흰색 캔버스와 검정 텍스트 중심",
+      "density.shift": "넓은 여백과 낮은 정보 밀도",
+      "radius.delta_px": "큰 장식성보다 절제된 작은 모서리",
+      "tracking.shift": "강한 제목은 안정적인 한국어 호흡으로 유지"
+    },
+    "voiceHints": [
+      "짧고 직접적인 문장",
+      "실제 기록과 결과물 우선",
+      "추상적인 성장 서사와 과장된 성과 표현 배제"
+    ],
+    "matchedKeywords": ["minimal", "calm", "friendly", "trustworthy", "airy", "evidence-led"],
+    "warnings": [
+      "Toss 레퍼런스는 시각적 방향만 참고하며 김효제의 브랜드 사실로 복사하지 않음",
+      "프로젝트 증빙 이미지의 라이선스와 일부 역할 정보는 저장소 기록 범위 안에서만 표현"
+    ]
+  },
+  "bootstrapped_at": "2026-09-16T00:00:00+09:00"
+}
