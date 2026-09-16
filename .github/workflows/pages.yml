@@ -38,6 +38,10 @@ jobs:
           cp dist/server/prerendered-routes/index.html _site/index.html
           cp dist/server/prerendered-routes/ai-guide.html _site/ai-guide/index.html
           cp dist/server/prerendered-routes/404.html _site/404.html
+          find _site -type f \( -name '*.html' -o -name '*.js' -o -name '*.css' \) -print0 | xargs -0 sed -i \
+            -e 's|"/_next/|"/my/_next/|g' \
+            -e "s|'/\\_next/|'/my/_next/|g" \
+            -e 's|url(/_next/|url(/my/_next/|g'
           touch _site/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
